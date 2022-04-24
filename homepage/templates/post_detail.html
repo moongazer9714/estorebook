@@ -1,0 +1,92 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block description %}  {{ post.description }}{% endblock %}
+{% block keywords %}  {{ post.keywords }}{% endblock %}
+
+
+
+{% block body %}
+    
+
+    <!-- section -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!--  Product Details -->
+                <div class="product product-details clearfix">
+                    <div class="col-md-6">
+                        <div id="product-main-view">
+                            <div class="product-view">
+                                <img src="{{ post.image.url }}" alt="" style="height: 400px">
+                            </div>
+
+
+                        </div>
+<!-- {#                        <div id="product-view">#}
+{#                            <div class="product-view">#}
+{#                                <img src="{{ post.image.url }}" alt="">#}
+{#                            </div>#}
+{##}
+{#                        </div>#} -->
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-body">
+
+                            <h2 class="product-name">{{ post.title }}</h2>
+                            <h3 class="product-price">{{ post.detail|safe}}</h3>
+
+
+                            </div>
+
+
+                            <p>{{ post.description }}</p>
+
+
+
+                            <div class="product-btns">
+
+
+                            </div>
+                        </div>
+                    </div>
+
+           
+
+
+
+                                            </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Product Details -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /section -->
+
+{% endblock %}
+{% block foot %}{% include 'footer.html' %} {% endblock %}

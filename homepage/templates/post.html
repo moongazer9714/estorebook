@@ -1,0 +1,35 @@
+
+{% extends 'base.html'%}
+{% load static %}
+
+{% block title %} Yangiliklar{% endblock %}
+{% block description %} {% endblock %}
+{% block keywords %}  {% endblock %}
+
+
+
+{% block body %}
+
+    
+    {% for rs in post %}
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+
+			<div class="row">
+
+                <img src="{{ rs.image.url }}"  style="height: 200px" alt="">
+			</div>
+            <a href="/post/{{ rs.id }}">Sarlavxa:{{ rs.title }}</a>
+            <a href="/post/{{ rs.id }}">Qisqa ma'lumot:{{ rs.description }}</a>
+            <a href="/post/{{ rs.id }}">Muallif:{{ rs.author }}</a>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /section -->
+    {% endfor %}
+
+ {% endblock %}
+{% block foot %}{% include 'footer.html' %} {% endblock %}

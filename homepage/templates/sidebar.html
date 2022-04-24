@@ -1,0 +1,43 @@
+{% load static %}
+<!-- Main Slider Start -->
+<div class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <nav class="navbar bg-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/"><i class="fa fa-home"></i>Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-shopping-bag"></i>Last Picked Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>New Arrivals Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-male"></i>Recommended books</a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-9">
+                <div class="header-slider normal-slider">
+                    {% for rs in products_slider1 %}
+                    <div class="header-slider-item">
+                        <img src="{{ rs.image.url }}" style="height: 500px;" alt="Slider Image" />
+                        <div class="header-slider-caption">
+                            <p>{{ rs.title }}</p>
+                            <a class="btn" href="/product/{{rs.id}}/{{rs.slug}}"><i class="fa fa-eye"></i>View</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Main Slider End -->      
